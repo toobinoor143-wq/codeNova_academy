@@ -2,7 +2,7 @@
 
 ## 1. Which HTML elements did you use to structure the website?
 
-I used semantic HTML elements such as <header>, <nav>, <main>, <section>, <article>, and <footer> to structure my website. I also used <h1>, <h2>, <h3>, <p>, <a>, <span>, <ul>, and <li> to display headings, paragraphs, navigation links, course information, and lists.
+I used semantic HTML elements such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` to structure my website. I also used `<h1>`, `<h2>`, `<h3>`, `<p>`, `<a>`, `<span>`, `<ul>`, and `<li>` to display headings, paragraphs, navigation links, course information, and lists.
 
 ## 2. How did you arrange the course cards?
 
