@@ -1,0 +1,930 @@
+
+/* =========================================
+   CODENOVA ACADEMY
+   Student: Tooba Shafique
+   Roll No: 3103001
+   Theme: Professional Blue and White
+   ========================================= */
+
+/* 1. Global Styling */
+:root {
+    --navy: #102a56;
+    --blue: #2459c4;
+    --blue-dark: #19469f;
+    --blue-light: #eaf1ff;
+    --ink: #182944;
+    --muted: #66758c;
+    --white: #ffffff;
+    --surface: #f6f8fc;
+    --border: #e0e7f1;
+    --green: #52d6a2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 3px solid #80aaff;
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+/* 2. Header and Navigation */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo > span:last-child {
+    color: var(--blue);
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    color: var(--white);
+    background: var(--blue);
+    font-size: 0.85rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    padding: 9px 15px;
+    border-radius: 9px;
+    color: #53627a;
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+/* 3. Hero Section */
+.hero {
+    color: var(--white);
+    background:
+        radial-gradient(circle at 85% 15%, #2c5796, transparent 30%),
+        linear-gradient(120deg, #102a56, #1b4a92);
+    overflow: hidden;
+}
+
+.hero-layout {
+    min-height: 560px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    margin-bottom: 15px;
+    color: var(--blue);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero .eyebrow {
+    color: #bcd4ff;
+}
+
+.hero h1 {
+    max-width: 600px;
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #a8c8ff;
+}
+
+.hero-text {
+    max-width: 520px;
+    margin: 22px 0 30px;
+    color: #dce7fa;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--white);
+    background: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: 0.2s ease;
+}
+
+.hero .btn {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--blue-dark);
+    color: var(--white);
+}
+
+.hero .btn:hover {
+    background: var(--blue-light);
+    color: var(--navy);
+}
+
+/* Decorative code window */
+.hero-card {
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+    overflow: hidden;
+    border: 1px solid #405477;
+    border-radius: 17px;
+    background: #0c1b34;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+.code-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+    border-bottom: 1px solid #273b59;
+    background: #142844;
+}
+
+.code-top span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ff8585;
+}
+
+.code-top span:nth-child(2) {
+    background: #ffd36b;
+}
+
+.code-top span:nth-child(3) {
+    background: #69d7a7;
+}
+
+.code-top p {
+    margin-left: 10px;
+    color: #b8c7df;
+    font-size: 0.75rem;
+}
+
+.code-body {
+    padding: 22px 18px;
+    overflow: hidden;
+    color: #e3ecfa;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: clamp(0.65rem, 1.2vw, 0.82rem);
+    line-height: 2.1;
+}
+
+.code-body p {
+    white-space: nowrap;
+}
+
+.code-body p span {
+    display: inline-block;
+    width: 25px;
+    color: #7188a8;
+}
+
+.code-footer {
+    padding: 12px 18px;
+    border-top: 1px solid #273b59;
+    color: var(--green);
+    font-size: 0.75rem;
+}
+
+/* 4. Section Headings */
+.section-heading {
+    max-width: 660px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact h2 {
+    color: var(--navy);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--blue);
+}
+
+.section-heading > p:last-child {
+    max-width: 590px;
+    margin: 15px auto 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* 5. Courses Section */
+.courses,
+.journey {
+    background: var(--surface);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.course-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 255px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 7px 22px rgba(16, 42, 86, 0.04);
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    border-color: #8eaff0;
+    background: #fbfdff;
+    box-shadow: 0 18px 35px rgba(36, 89, 196, 0.12);
+}
+
+.course-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.course-top > span:first-child {
+    color: #72819a;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.course-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    color: var(--blue);
+    background: var(--blue-light);
+    font-family: Consolas, monospace;
+    font-weight: 800;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 1.13rem;
+    line-height: 1.4;
+}
+
+.course-card > p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+.course-card > a {
+    margin-top: auto;
+    color: var(--blue);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.course-card > a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.popular {
+    border: 2px solid #7ca3f2;
+    background: #edf4ff;
+}
+
+.popular:hover {
+    background: #e2edff;
+}
+
+.popular-label {
+    position: absolute;
+    top: -13px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    color: var(--white);
+    background: var(--blue);
+    font-size: 0.68rem;
+    font-weight: 800;
+}
+
+/* 6. About Section: Two Columns */
+.about-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 390px;
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 22px;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 80% 15%, #315c9e, transparent 35%),
+        linear-gradient(145deg, #173a77, #10264c);
+    box-shadow: 0 25px 50px rgba(16, 42, 86, 0.15);
+}
+
+.about-symbol {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    color: #a8c8ff;
+    font-family: Consolas, monospace;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.about-visual .eyebrow {
+    color: #a9c8ff;
+}
+
+.about-visual h3 {
+    max-width: 340px;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.35;
+}
+
+.accent-line {
+    width: 45px;
+    height: 3px;
+    margin: 20px 0 12px;
+    border-radius: 5px;
+    background: var(--green);
+}
+
+.about-visual > p:last-child {
+    color: #c4d5f1;
+    font-size: 0.85rem;
+}
+
+.about-content > p:not(.eyebrow) {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.about-points {
+    display: grid;
+    gap: 17px;
+    margin: 25px 0;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.check {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    border-radius: 50%;
+    color: #147c5a;
+    background: #ddf8eb;
+    font-weight: 900;
+}
+
+.point h4 {
+    color: var(--navy);
+    font-size: 0.9rem;
+}
+
+.point p {
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+/* 7. Learning Journey: Odd Roll Number */
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.journey-card {
+    position: relative;
+    min-width: 0;
+    padding: 28px 25px;
+    border: 2px solid #dce6f5;
+    border-radius: 17px;
+    background: var(--white);
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue);
+    box-shadow: 0 14px 30px rgba(36, 89, 196, 0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #aabbd5;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.journey-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border-radius: 13px;
+    color: var(--blue);
+    background: var(--blue-light);
+    font-size: 1.5rem;
+}
+
+.journey-card h3 {
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 1.2rem;
+}
+
+.journey-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* 8. Contact Section */
+.contact {
+    color: var(--white);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 45px;
+    padding: 45px;
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 90% 15%, #24467d, transparent 30%),
+        var(--navy);
+}
+
+.contact .eyebrow {
+    color: #a9c8ff;
+}
+
+.contact h2 {
+    color: var(--white);
+}
+
+.contact h2 span {
+    color: #a9c8ff;
+}
+
+.contact-layout > div:first-child > p:last-child {
+    margin-top: 15px;
+    color: #d0ddf2;
+    font-size: 0.94rem;
+}
+
+.email-box {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #405477;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.email-box > p {
+    margin-bottom: 10px;
+    color: #a9c8ff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.email-box a {
+    display: inline-block;
+    max-width: 100%;
+    color: var(--white);
+    font-size: clamp(0.85rem, 1.7vw, 1.15rem);
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.email-box a:hover {
+    color: #a9c8ff;
+    text-decoration: underline;
+}
+
+.email-box small {
+    display: block;
+    margin-top: 12px;
+    color: #c3d2e9;
+    font-size: 0.75rem;
+}
+
+/* 9. Footer */
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-content > p {
+    color: var(--muted);
+    font-size: 0.76rem;
+    text-align: center;
+}
+
+.footer-content strong {
+    color: var(--navy);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablet screens: 768px and below */
+@media (max-width: 900px) {
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero-layout {
+        min-height: auto;
+        grid-template-columns: 1fr 0.9fr;
+        gap: 30px;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 5.5vw, 3.5rem);
+    }
+
+    .about-layout {
+        gap: 35px;
+    }
+
+    .about-visual {
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .course-grid,
+    .journey-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        gap: 25px;
+        padding: 35px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile screens: 600px and below */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 115px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Navigation fits the phone screen */
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 8px 3px;
+        text-align: center;
+        font-size: 0.76rem;
+    }
+
+    /* Hero becomes one column */
+    .hero-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding: 52px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 10.5vw, 3.4rem);
+    }
+
+    .hero-text {
+        font-size: 0.94rem;
+    }
+
+    .hero-card {
+        max-width: 430px;
+    }
+
+    .code-body {
+        font-size: clamp(0.62rem, 2.5vw, 0.8rem);
+    }
+
+    /* One course card per row */
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .contact h2 {
+        font-size: clamp(1.85rem, 8vw, 2.4rem);
+    }
+
+    .course-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .course-card {
+        min-height: 0;
+        padding: 23px;
+    }
+
+    /* About boxes stack vertically */
+    .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+
+    .about-visual {
+        min-height: 320px;
+    }
+
+    .about-symbol {
+        font-size: 4rem;
+    }
+
+    /* Learning steps stack vertically */
+    .journey-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .journey-card {
+        padding: 23px;
+    }
+
+    /* Contact section stacks */
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        padding: 27px 22px;
+    }
+
+    .email-box {
+        padding: 19px;
+    }
+
+    /* Footer stacks vertically */
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-content > p {
+        line-height: 1.7;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .logo {
+        font-size: 0.98rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .contact-layout {
+        padding: 22px 16px;
+    }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+
+/* Fix About Visual text overlapping */
+
+.about-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.about-symbol {
+    display: block;
+    position: static;
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.about-visual .eyebrow {
+    position: static;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    overflow-wrap: anywhere;
+}
+
+.about-visual h3 {
+    position: static;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.about-visual .accent-line {
+    position: static;
+    margin: 4px 0;
+}
+
+.about-visual p:last-child {
+    position: static;
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+    .about-visual {
+        padding: 26px;
+        gap: 12px;
+    }
+
+    .about-symbol {
+        font-size: 52px;
+    }
+
+    .about-visual .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+}
